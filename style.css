@@ -44,7 +44,8 @@ header p{
   border-radius: 7px;
   padding: 30px;
   text-align: right;
-  box-shadow: 5px 4px 6px hsl(229, 6%, 66%);;
+  box-shadow: 5px 4px 6px hsl(229, 6%, 66%);
+  background-color: white;
 }
 .box:hover{
   cursor: pointer;
