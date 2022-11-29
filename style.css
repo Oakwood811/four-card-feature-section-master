@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-*,*::before, ::after{
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -12,85 +12,103 @@ body{
   color:hsl(229, 6%, 66%); 
 }
 .container{
-  /* max-width: 1320px; */
-  border: 4px solid greenyellow;
-  margin-top: 8rem;
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 30px;
 }
-
-
-.top-context{
-  width: 800px;
+header{
   text-align: center;
+}
+header h2{
+  font-size: 34px;
   font-weight: 200;
+}
+header h3{
+  font-size: 34px;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+header p{
+  margin-top: 20px;
+  width: 500px;
   margin: 0 auto;
 }
-.top-context p{
-  margin-top: 10px;
-  padding-bottom: 40px;
-  font-size: 15px;
-  color: hsl(229, 6%, 66%)
-}
-h1{
-  font-size: 60px;
-  color: hsl(234, 12%, 34%);
-  font-weight: 200;
-}
-h1 span{
-  font-weight: 600;
-}
+
 .main-content{
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 25px;
+  margin-top: 50px;
+}
+.box{
+  border-radius: 7px;
+  padding: 30px;
+  text-align: right;
+  box-shadow: 5px 4px 6px hsl(229, 6%, 66%);;
+}
+.box:hover{
+  cursor: pointer;
+  background-color: yellow;
+  transition: 1s ease-in-out;
+}
+.box-text{
+  text-align: left;
+  padding-bottom: 50px;
 }
 .supervisor{
-  width: 600px;
-  height: 500px;
-  border-top: 7px solid hsl(180, 62%, 55%);
-  border-radius: 10px;
-  padding: 32px;
-  box-shadow: 5px 4px 6px hsl(234, 12%, 34%);
-  font-weight: 200;
-  margin: 25px;
+  border-top: 5px solid hsl(180, 62%, 55%);
 }
-
 .teambuilder{
-  width: 600px;
-  height: 500px;
-  border-top: 7px solid hsl(0, 78%, 62%);
-  border-radius: 10px;
-  padding: 32px;
-  box-shadow: 5px 4px 6px hsl(234, 12%, 34%);
-  font-weight: 200;
-  margin: 25px;
+  border-top: 5px solid hsl(0, 78%, 62%);
 }
 .karma{
-  width: 600px;
-  height: 500px;
-  border-top: 7px solid hsl(34, 97%, 64%);
-  border-radius: 10px;
-  padding: 32px;
-  box-shadow: 5px 4px 6px hsl(234, 12%, 34%);
-  font-weight: 200;
-  margin: 25px;
+  border-top: 5px solid hsl(34, 97%, 64%);
 }
 .calculator{
-  width: 600px;
-  height: 500px;
-  border-top: 7px solid blue;
-  border-radius: 10px;
-  padding: 32px;
-  box-shadow: 5px 4px 6px hsl(234, 12%, 34%);
-  font-weight: 200;
-  margin: 25px;
+  border-top: 5px solid hsl(212, 86%, 64%);
 }
-h2{
+h5{
+  color: hsl(234, 12%, 34%);
+  font-size: 20px;
   margin-bottom: 10px;
 }
-img{
-  width: 4vw;
-  position: relative;
-  left: 70%;
-  top: 17%;
+.stacked-box{
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+}
+.supervisor, .calculator{
+  align-self: center;
+}
+
+@media (max-width:768px){
+  body{
+    background-color: skyblue;
+  }
+  .container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 2rem;
+  }
+  header h2{
+    font-size: 22px;
+  }
+  header h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  header p{
+    width: fit-content;
+  }
+  .main-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .box{
+    background-color: whitesmoke;
+    padding: 20px;
+  }
+
 }
